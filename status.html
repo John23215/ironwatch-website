@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>IronWatch Status</title><link rel="stylesheet" href="styles.css"/></head>
+<body>
+<canvas id="bg"></canvas>
+<header class="nav"><a class="brand" href="index.html">IronWatch <small>Status</small></a><nav><a href="index.html">Home</a><button id="themeToggle" class="ghost">☾</button></nav></header>
+<main class="section">
+<h2>System Status</h2><p class="lead">Live health metrics (demo):</p>
+<div class="status-grid">
+  <div class="status-card"><h3>API</h3><p>State: <b class="badge ok">Operational</b></p><p>Ping: <span id="ping">42ms</span></p></div>
+  <div class="status-card"><h3>Database</h3><p>State: <b class="badge ok">Operational</b></p><p>Latency: 7ms</p></div>
+  <div class="status-card"><h3>Bot Uptime</h3><p>Uptime: <span id="uptime">99.999%</span></p><p>Guilds: <span id="guilds">1240</span></p></div>
+</div>
+</main>
+<footer class="footer"><div>IronWatch Security © 2025 — Status</div><div class="links"><a href="index.html">Home</a></div></footer>
+<script src="script.js"></script>
+</body></html>

@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>IronWatch Docs — Commands & Setup</title><link rel="stylesheet" href="styles.css"/></head>
+<body>
+<canvas id="bg"></canvas>
+<header class="nav"><a class="brand" href="index.html">IronWatch <small>Docs</small></a><nav><a href="index.html">Home</a><button id="themeToggle" class="ghost">☾</button><a class="cta" target="_blank" rel="noopener" href="https://discord.com/oauth2/authorize?client_id=1423379578784714883&permissions=8&integration_type=0&scope=bot+applications.commands">🚀 Invite</a></nav></header>
+<main class="section docs-layout">
+<aside class="sidebar">
+  <a href="#intro">Introduction</a><a href="#setup">Setup</a><a href="#moderation">Moderation</a><a href="#tickets">Tickets</a>
+  <a href="#invoices">Invoices (Demo)</a><a href="#giveaways">Giveaways</a><a href="#utilities">Utilities</a><a href="#analytics">Analytics</a>
+</aside>
+<article class="content">
+<section id="intro"><h2>Introduction</h2><p class="lead">IronWatch Security is a next-gen Discord bot for moderation, automation, tickets, invoices, and more.</p></section>
+<section id="setup"><h2>Setup</h2><div class="docs-box"><pre><code>1) Invite the bot with admin permissions.
+2) Run /setup to auto-create: Tickets, Movement Log, Invoices channels.
+3) Use /panel to post a ticket panel and a giveaway panel.</code></pre></div></section>
+<section id="moderation"><h2>Moderation</h2><div class="docs-box"><pre><code>/ban @user [reason]
+/kick @user [reason]
+/warn @user [reason]
+/warnings @user
+/unwarn warnID
+/silence @user [minutes] [reason]
+/unsilence @user
+/clear [amount]
+/lockdown [channel|guild]  /release [channel|guild]
+/role assign @user @role  /role remove @user @role</code></pre></div></section>
+<section id="tickets"><h2>Tickets</h2><div class="docs-box"><pre><code>/ticket panel
+/ticket create [category]
+/ticket rename [name]
+/ticket add @user  /ticket remove @user
+/ticket close [reason]
+/ticket transcript</code></pre></div></section>
+<section id="invoices"><h2>Invoices (Demo)</h2><div class="docs-box"><pre><code>/invoice create @user [item] [price] [currency]
+/invoice cancel [id]
+/invoice list
+/invoice status [id]</code></pre></div></section>
+<section id="giveaways"><h2>Giveaways</h2><div class="docs-box"><pre><code>/giveaway start [duration] [winners] [prize] [roleRequirement?]
+/giveaway end [id]
+/giveaway reroll [id]
+/giveaway list
+/giveaway edit [id]</code></pre></div></section>
+<section id="utilities"><h2>Utilities</h2><div class="docs-box"><pre><code>/embed create  /embed edit
+/timestamp [epoch]
+/viewrole @role  /viewusers @role
+/serverinfo  /userinfo @user
+/poll question: string options:[...]</code></pre></div></section>
+<section id="analytics"><h2>Analytics</h2><div class="docs-box"><pre><code>/stats
+/serverstats
+/toproles
+/warnings</code></pre></div></section>
+</article>
+</main>
+<footer class="footer"><div>IronWatch Security © 2025 — Docs</div><div class="links"><a href="index.html">Home</a><a target="_blank" rel="noopener" href="https://discord.gg/EUUUvWfkEB">Support</a></div></footer>
+<script src="script.js"></script>
+</body></html>

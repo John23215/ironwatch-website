@@ -1,1 +1,196 @@
-<!doctype html><html><head><meta charset='utf-8'><title>IronWatch Security</title><style>body{background:#0B0F16;color:#EAF2FF;font-family:Inter,system-ui,sans-serif;padding:40px}a{color:#0A84FF}</style></head><body><h1>IronWatch Security</h1><p>Advanced Discord moderation, tickets, giveaways — unified.</p><p><a href='#'>Invite Bot</a></p></body></html>
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>IronWatch Security — Advanced Discord Security & Moderation</title>
+  <meta name="description" content="IronWatch Security is a premium Discord security & moderation bot with tickets, invoices (demo), giveaways, analytics, global tools, and automation." />
+  <meta name="theme-color" content="#7c3aed" />
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;800&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <canvas id="bg"></canvas>
+  <header class="nav">
+    <a class="brand" href="index.html">IronWatch <small>Security</small></a>
+    <nav>
+      <a href="#features">Features</a>
+      <a href="#commands">Commands</a>
+      <a href="#showcase">Showcase</a>
+      <a href="docs.html">Docs</a>
+      <a href="status.html">Status</a>
+      <a href="dashboard.html">Dashboard</a>
+      <button id="themeToggle" class="ghost" aria-label="Toggle theme">☾</button>
+      <a class="cta" target="_blank" rel="noopener" href="https://discord.com/oauth2/authorize?client_id=1423379578784714883&permissions=8&integration_type=0&scope=bot+applications.commands">🚀 Invite</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="hero" class="section hero">
+      <div class="hero__content">
+        <h1><span>IronWatch</span> Security</h1>
+        <p class="subtitle">The most advanced Discord <b>Security, Moderation</b> & <b>Automation</b> platform.</p>
+        <div class="actions">
+          <a class="btn primary" target="_blank" rel="noopener" href="https://discord.com/oauth2/authorize?client_id=1423379578784714883&permissions=8&integration_type=0&scope=bot+applications.commands">🚀 Invite Bot</a>
+          <a class="btn" target="_blank" rel="noopener" href="https://discord.gg/EUUUvWfkEB">💬 Join Support</a>
+          <a class="btn ghost" href="#features">▼ Learn more</a>
+        </div>
+        <ul class="stats">
+          <li><strong>1,240+</strong><span>Guilds</span></li>
+          <li><strong>99.9%</strong><span>Uptime</span></li>
+          <li><strong>~45ms</strong><span>Latency</span></li>
+        </ul>
+      </div>
+      <div class="hero__art" aria-hidden="true">
+        <div class="chip">LIVE</div>
+        <div class="radar"></div>
+        <div class="shield"><div class="glow"></div></div>
+      </div>
+    </section>
+
+    <section id="features" class="section">
+      <h2>Core Features</h2>
+      <p class="lead">Built like a premium SaaS, tuned for Discord communities.</p>
+      <div class="grid features">
+        <article class="card"><div class="icon">🛡</div><h3>Moderation</h3><p>Ban, kick, warn, silence, lockdown — with movement logs & clean embeds.</p></article>
+        <article class="card"><div class="icon">🎟</div><h3>Tickets</h3><p>Panels, categories, transcripts, priority, assignment — mobile-perfect.</p></article>
+        <article class="card"><div class="icon">💳</div><h3>Invoices (Demo)</h3><p>Create professional invoices with order summaries & status tracking.</p></article>
+        <article class="card"><div class="icon">🎉</div><h3>Giveaways</h3><p>Live countdown, role-gated entries, rerolls, audit-safe winners.</p></article>
+        <article class="card"><div class="icon">🌍</div><h3>Global Tools</h3><p>Owner-only: global ban/silence, announcements, stats, config.</p></article>
+        <article class="card"><div class="icon">📊</div><h3>Analytics</h3><p>Joins/leaves charts, top roles, active users — rendered as embeds.</p></article>
+        <article class="card"><div class="icon">⚙️</div><h3>Utilities</h3><p>Embeds, polls, timestamps, role viewers — essentials done right.</p></article>
+        <article class="card"><div class="icon">🔒</div><h3>Automation</h3><p>Anti-raid, anti-spam, auto-role, filters — sensible defaults.</p></article>
+      </div>
+    </section>
+
+    <section id="commands" class="section">
+      <h2>Command Explorer</h2>
+      <p class="lead">Search & filter IronWatch’s slash commands.</p>
+      <div class="toolbar">
+        <input id="cmdSearch" placeholder="Search commands, e.g. /ban, /ticket..." />
+      </div>
+      <div class="tabs">
+        <button class="tab active" data-tab="mod">Moderation</button>
+        <button class="tab" data-tab="tickets">Tickets</button>
+        <button class="tab" data-tab="invoices">Invoices</button>
+        <button class="tab" data-tab="give">Giveaways</button>
+        <button class="tab" data-tab="utils">Utilities</button>
+      </div>
+      <div class="grid commands">
+        <div class="cmd mod"><h4>/ban <span>@user reason</span></h4><p>Ban a member and log with audit-grade embeds.</p></div>
+        <div class="cmd mod"><h4>/warn <span>@user reason</span></h4><p>Warn with escalation & database storage.</p></div>
+        <div class="cmd mod"><h4>/lockdown <span>channel|guild</span></h4><p>Freeze a channel or entire server instantly.</p></div>
+
+        <div class="cmd tickets hidden"><h4>/ticket create</h4><p>Post a category panel with Close / Rename / Transcript buttons.</p></div>
+        <div class="cmd tickets hidden"><h4>/ticket transcript</h4><p>Export HTML/PDF transcript with participants & timeline.</p></div>
+
+        <div class="cmd invoices hidden"><h4>/invoice create <span>@user item price</span></h4><p>Generate a demo invoice with order summary & payment links.</p></div>
+
+        <div class="cmd give hidden"><h4>/giveaway start</h4><p>Start a timed giveaway with role restriction and auto rerolls.</p></div>
+
+        <div class="cmd utils hidden"><h4>/embed create</h4><p>Craft branded embeds with buttons, images, and footers.</p></div>
+        <div class="cmd utils hidden"><h4>/timestamp</h4><p>Generate Discord timestamps for any timezone.</p></div>
+      </div>
+    </section>
+
+    <section id="showcase" class="section">
+      <h2>Showcase</h2>
+      <p class="lead">Clean, trustworthy embeds — exactly how staff want them.</p>
+      <div class="carousel">
+        <div class="frame active">
+          <header>Ticket Created</header>
+          <div class="discord">
+            <div class="embed">
+              <div class="embed-title">#1 Discord Supplier</div>
+              <div class="embed-desc">
+                Thanks for opening a ticket — please include as much info as possible.<br/>
+                Purchases are final; positive voucher required for warranty.
+              </div>
+              <div class="banner"></div>
+              <div class="embed-footer">IronWatch Security • Tickets</div>
+            </div>
+            <div class="actions">
+              <button class="pill">✏️ Edit</button>
+              <button class="pill">🟢 Release</button>
+              <button class="pill danger">❌ Close</button>
+            </div>
+          </div>
+        </div>
+        <div class="frame">
+          <header>Invoice Created</header>
+          <div class="discord">
+            <div class="embed two">
+              <div class="cols">
+                <div>
+                  <div class="embed-title">✅ Invoice Created Successfully</div>
+                  <ul class="kv">
+                    <li><b>Invoice ID</b><span>7093091</span></li>
+                    <li><b>Status</b><span>Pending Payment</span></li>
+                    <li><b>Customer</b><span>@roman</span></li>
+                    <li><b>Country</b><span>US</span></li>
+                  </ul>
+                </div>
+                <div>
+                  <div class="embed-title">🧾 Order Summary</div>
+                  <ul class="kv">
+                    <li><b>Product</b><span>DAZN Lifetime</span></li>
+                    <li><b>Qty</b><span>1</span></li>
+                    <li><b>Total</b><span>$1.00</span></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="row-links">
+                <a class="btn small" href="#">View Invoice</a>
+                <a class="btn small primary" href="#">Checkout Now</a>
+              </div>
+              <div class="embed-footer">IronWatch Security • Invoices</div>
+            </div>
+          </div>
+        </div>
+        <div class="frame">
+          <header>Giveaway</header>
+          <div class="discord">
+            <div class="embed">
+              <div class="embed-title">🎉 Giveaway — Nitro (1 Month)</div>
+              <div class="embed-desc">Ends in <b id="count">00:59:59</b> • 2 winners</div>
+              <div class="progress"><span style="width:38%"></span></div>
+              <div class="embed-footer">IronWatch Security • Giveaways</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-controls">
+        <button class="dot active" data-idx="0" aria-label="Ticket slide"></button>
+        <button class="dot" data-idx="1" aria-label="Invoice slide"></button>
+        <button class="dot" data-idx="2" aria-label="Giveaway slide"></button>
+      </div>
+    </section>
+
+    <section id="docs" class="section">
+      <h2>Quick Start</h2>
+      <p class="lead">Three steps to get IronWatch running in your server.</p>
+      <ol class="steps">
+        <li><b>Invite</b> the bot with administrator permissions.</li>
+        <li>Run <code>/setup</code> to create channels and roles (Tickets, Movement Log, Invoices).</li>
+        <li>Open <code>/panel</code> to post your ticket & giveaway panels.</li>
+      </ol>
+      <div class="docs-box"><pre><code># Example permissions needed
+- Manage Roles, Manage Channels, Ban Members, Kick Members
+- Read Message History, Manage Messages, Use Application Commands</code></pre></div>
+      <a class="btn ghost" href="docs.html">📖 Read Full Docs</a>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div>IronWatch Security © 2025 — Protecting Communities</div>
+    <div class="links">
+      <a target="_blank" rel="noopener" href="https://discord.gg/EUUUvWfkEB">Support</a>
+      <a target="_blank" rel="noopener" href="https://discord.com/oauth2/authorize?client_id=1423379578784714883&permissions=8&integration_type=0&scope=bot+applications.commands">Invite</a>
+      <a href="docs.html">Docs</a>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
